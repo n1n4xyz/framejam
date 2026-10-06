@@ -1,0 +1,63 @@
+{
+  "id": "career-trailer",
+  "name": "Career Trailer",
+  "tagline": "A vertical career story in three chapters: before, the turn, now. Flat-vector scenes, a year bar that advances, and an end card with name and handle.",
+  "description": "Vertical 9:16 career film for Reels, Shorts and TikTok. A black hook line opens it. Chapter 01 BEFORE and chapter 03 NOW each get one or two milestone scenes on solid colour fields that wipe in from the right. Chapter 02 THE TURN is a single scene that wipes UP from the bottom in coral with white type and holds longer. Each scene stacks a chapter pill, a huge year, a place pill, a flat illustration and a short headline with one caption. A thin year bar near the bottom tracks the story. A screenshot scene shows a real website scrolling inside a browser frame. The film ends on a dark card with the person's name, one line and their handle. An AI GENERATED label stays visible the whole time.",
+  "mood": ["warm", "narrative", "clean", "personal"],
+  "pacing": "medium",
+  "format": "9:16",
+  "width": 1080,
+  "height": 1920,
+  "durationSeconds": 15,
+  "palette": {
+    "opener": "#0b0b0c",
+    "cream": "#f3e8cd",
+    "lilac": "#b9a6f0",
+    "coral": "#ff6a4d",
+    "mint": "#9fd9b8",
+    "sky": "#80c4ea",
+    "charcoal": "#2a2d33",
+    "ink": "#1d1b19",
+    "paper": "#fff6e0",
+    "gold": "#e9b43c"
+  },
+  "fonts": {
+    "display": {
+      "family": "Bricolage Grotesque",
+      "weights": [800],
+      "source": "Google Fonts",
+      "usage": "Year at 240px with -0.045em tracking, headlines 96px (max two lines), hook 128px, end-card name 150px"
+    },
+    "body": {
+      "family": "DM Sans",
+      "weights": [500, 700],
+      "source": "Google Fonts",
+      "usage": "Captions 40px at 500, chapter and place pills 30-32px at 700 with 0.16-0.18em tracking"
+    }
+  },
+  "easing": {
+    "wipe": "power3.inOut",
+    "spring": "back.out(1.8)",
+    "textIn": "expo.out",
+    "marker": "power3.inOut"
+  },
+  "transitions": [
+    "milestone scenes: a darker band, then the solid colour, wipe in from the right (x 1080 to 0) in 0.42s",
+    "THE TURN wipes UP from the bottom (y 1920 to 0): a black band first, then coral 0.22s behind it, so the change feels heavier",
+    "the previous scene is hidden only after the wipe covers it, never a crossfade",
+    "the year-bar marker travels to the new year in the same 0.6s as the wipe while an arc draws behind it; a repeated year pulses the marker instead"
+  ],
+  "textAnimations": [
+    "chapter pill slides in from the left with back.out(2)",
+    "year rises 80px (140px on THE TURN) with expo.out in 0.5s",
+    "place pill, headline and caption follow, staggered about 0.1s",
+    "illustration parts pop from scale 0.15 at the feet with back.out(1.8), 0.06s stagger",
+    "the hook highlights its key word in coral after the line lands"
+  ],
+  "rhythm": {
+    "averageShotSeconds": 2,
+    "notes": "15s preview: hook 1.6s, two BEFORE scenes of 2s, THE TURN 2.8s, two NOW scenes of 2s, end card 2.4s. For a 45s cut keep the same structure and stretch each scene to 4-6s with one extra secondary motion per scene, or add up to two more milestones per chapter."
+  },
+  "tags": ["career", "biography", "timeline", "vertical", "reels", "flat-vector", "storytelling"],
+  "guide": "- Vertical 1080x1920. Keep text out of the bottom 170px and the right 120px, where Reels and Shorts put their buttons.\n- Story comes from three questions: what you did before, what changed, what you do now. Map them to chapters 01 BEFORE (1-3 scenes), 02 THE TURN (exactly one scene) and 03 NOW (1-3 scenes). Open on a black hook line that names the moment before the change, with one key word in coral via <em>.\n- Every milestone scene, top to bottom: dark chapter pill, year in Bricolage Grotesque 800 at 240px, outlined place pill (city, month or degree), a flat illustration in a 900x700 box at y=560, headline under 5 words at 96px, one 40px caption.\n- Each milestone gets its own solid colour: cream #f3e8cd, lilac #b9a6f0, mint #9fd9b8, sky #80c4ea. THE TURN is always coral #ff6a4d with white type and wipes up from the bottom.\n- Illustrations use circles, rects and simple paths only; people are a head circle, rounded torso, leg bars and line arms. Group parts as .pop. Add one secondary motion per scene (car rolling, wheel turning, door opening, graph edges drawing, bubbles popping).\n- Screenshot scene: drop a real screenshot of the person's site or profile into #shotimg as <image href=\"assets/shot1.png\" width=\"760\" height=\"1400\"/>. Get it automatically with `npx hyperframes capture <url>` instead of taking it by hand. It scrolls 760px inside the browser frame.\n- Year bar at y=1610: one tick per year between the first and last milestone, a marker that rides along, arcs between milestones, year labels that fade in. Bar colour follows the scene text colour.\n- End on the dark card: name in two lines, one plain sentence, handle in a coral pill. Keep the AI GENERATED label in the top right for the whole film.\n- Write specific, plain facts (cities, years, counts). No gradients, shadows or photo textures."
+}
